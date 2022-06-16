@@ -1,0 +1,94 @@
+//SECTION FLOW
+.flow {
+}
+
+.flow-card {
+    margin-bottom: 30px;
+
+    @include mq('phablet') {
+        margin-bottom: 35px;
+    }
+
+    @include mq('bootstrap-lg') {
+        margin-bottom: 0;
+    }
+
+    &__header {
+        text-align: center;
+        // position: relative;
+        padding-top: 50px;
+        font-size: 1.8rem;
+        margin: 0 auto;
+        // width: 80%;
+
+        @include mq('phablet') {
+            padding-top: 15px;
+        }
+
+        @include mq('tablet') {
+            width: auto;
+        }
+
+        >img {
+            height: 95px;
+        }
+    }
+
+    &__number {
+        position: absolute;
+        top: 0;
+        left: 50%;
+        transform: translateX(-50%);
+        background: $color-primary;
+        color: $color-white;
+        font-weight: bold;
+        font-size: 2.0rem;
+        width: 37px;
+        height: 37px;
+        line-height: 37px;
+        text-align: center;
+
+        @include mq('tablet') {
+            left: 15px;
+            transform: translateX(0);
+        }
+
+    }
+
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 700;
+        line-height: 1.5;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        margin: 15px 0;
+        color: $color-black;
+
+        @include mq('phablet') {
+            height: 55px;
+            margin: 0 0 15px;
+        }
+
+        @include mq('bootstrap-lg') {
+            font-size: 1.6rem;
+        }
+
+        @include mq('desktop') {
+            font-size: 1.8rem;
+        }
+    }
+
+    &__text {
+        font-size: 1.6rem;
+        text-align: center;
+        line-height: 1.6;
+        font-weight: 500;
+        color: $color-black;
+
+        @include mq('bootstrap-lg') {
+            text-align: left;
+        }
+    }
+}

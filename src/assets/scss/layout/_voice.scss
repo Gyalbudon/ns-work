@@ -1,0 +1,149 @@
+.voice {
+
+    &__row {
+        @include mq('tablet') {
+            margin: 0 -15px;
+
+            &>[class^="col"] {
+                padding: 0 15px;
+            }
+        }
+
+        @include mq('bootstrap-lg') {
+            margin: 0 -25px;
+
+            &>[class^="col"] {
+                padding: 0 25px;
+            }
+
+        }
+    }
+}
+
+
+.voice-card {
+    padding: 10px;
+    border: 1px solid $color-primary;
+    height: 100%;
+
+    @include mq('phablet') {
+        margin-bottom: 15px;
+    }
+
+    @include mq('tablet') {
+        margin-bottom: 0;
+    }
+
+    @include mq('bootstrap-lg') {
+        margin-bottom: 0;
+        padding: 15px;
+    }
+
+    &__desc {
+        font-size: 1.8rem;
+        display: inline-block;
+        font-weight: 700;
+        background-color: $color-primary;
+        color: $color-white;
+        padding: 13px 15px;
+        height: 47px;
+        position: relative;
+        z-index: 1;
+        left: -10px;
+        top: -10px;
+
+        @include mq('tablet') {
+            font-size: 14px;
+            left: -10px;
+            top: -10px;
+            padding: 13px 10px;
+        }
+
+        @include mq('bootstrap-lg') {
+            font-size: 1.8rem;
+            left: -15px;
+            top: -15px;
+            padding: 13px 15px;
+        }
+
+        &::after {
+            position: absolute;
+            content: '';
+            width: 0;
+            height: 0;
+            right: -26px;
+            top: 0;
+            border-left: 25px solid transparent;
+            border-right: 25px solid transparent;
+            border-top: 48px solid $color-primary;
+            z-index: -1;
+        }
+    }
+
+    &__header {
+        text-align: center;
+        font-size: 1.8rem;
+
+        img {
+            height: 150px;
+
+
+            @include mq('tablet') {
+                padding-top: 15px;
+            }
+        }
+    }
+
+    &__title {
+        font-size: 1.8rem;
+        font-weight: 700;
+        line-height: 1.4;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: auto;
+        margin: 7px 0;
+        color: $color-black;
+        height: 50px;
+
+
+        @include mq('phablet') {
+            font-size: 14px;
+            // margin: 0 0 15px;
+        }
+
+        @include mq('tablet') {
+            font-size: 14px;
+            // margin: 20px 0 25px;
+            height: 40px;
+        }
+
+        @include mq('bootstrap-lg') {
+            font-size: 1.8rem;
+            height: 60px;
+        }
+    }
+
+    &__text {
+        font-size: 1.6rem;
+        line-height: 1.8;
+        margin: 0;
+        font-weight: 500;
+        color: $color-black;
+
+        @include mq('phablet') {
+            font-size: 1.3rem;
+        }
+
+        @include mq('tablet') {
+            font-size: 1.2rem;
+            // padding-top: 15px;
+        }
+
+        @include mq('bootstrap-lg') {
+            font-size: 1.6rem;
+        }
+    }
+}
+

@@ -1,0 +1,105 @@
+.footer {
+    color: $color-black;
+    background-color: #f2f2f2;
+    padding-top: 25px;
+    margin-top: 0;
+    @include mq("tablet") {
+        padding-top: 41px;
+    }
+
+    & .container {
+        max-width: 930px;
+    }
+
+    &__top {
+        display: flex;
+        align-items: center;
+
+        color: $color-white;
+
+        img {
+            width: 91px;
+            // height: 62px;
+            @include mq("tablet") {
+                width: 136px;
+                // height: 91px;
+            }
+        }
+    }
+
+    &__address {
+        line-height: 1;
+        color: $color-black;
+        span {
+            font-size: 1.8rem;
+            line-height: 1.2;
+            font-weight: 700;
+            display: block;
+            letter-spacing: 0.1rem;
+            @include mq("tablet") {
+                font-size: 2.6rem;
+            }
+        }
+    }
+
+    &__logo {
+        width: 250px;
+        margin: 0 auto;
+    }
+    &-middle {
+        @include mq("tablet") {
+            display: flex;
+        }
+        @include mq("bootstrap-lg") {
+            padding-left: 10px;
+        }
+    }
+
+    &__copyright {
+        text-align: center;
+        padding: 20px 0;
+        font-size: 1.3rem;
+        font-weight: 400;
+        line-height: 2.15;
+        margin-top: 10px;
+        color: #666666;
+        @include mq("tablet") {
+            text-align: end;
+        }
+    }
+
+    &-contact {
+        margin-top: 26px;
+        @include mq("tablet") {
+            margin-right: 45px;
+            margin-top: 22px;
+        }
+        & .fo-heading {
+            h3 {
+                font-size: 1.4rem;
+                line-height: 1.7;
+                font-weight: 400;
+            }
+        }
+        & .fo-addres {
+            span {
+                font-size: 1.4rem;
+                line-height: 1.7;
+            }
+        }
+        & .fo-contact {
+            display: flex;
+            flex-direction: column;
+            span {
+                font-size: 1.4rem;
+                line-height: 1.7;
+                font-weight: 400;
+
+                a {
+                    text-decoration: none;
+                    color: #000;
+                }
+            }
+        }
+    }
+}

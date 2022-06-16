@@ -1,0 +1,120 @@
+.news {
+    &-date {
+        margin-top: 12px;
+        span {
+            font-size: 1.3rem;
+            font-weight: 400;
+            line-height: 2.1;
+        }
+    }
+    &-heading {
+        &__text {
+            font-size: 1.6rem;
+            font-weight: 700;
+            line-height: 1.4;
+            letter-spacing: -0.3px;
+            margin-bottom: 10px;
+        }
+    }
+    &-pragp {
+        font-size: 1.3rem;
+        font-weight: 400;
+        line-height: 1.5;
+        color: $color-paragraph;
+        letter-spacing: -0.3px;
+    }
+}
+.heading-primary {
+    font-size: 2.4rem;
+    letter-spacing: 0.1em;
+    color: #000;
+    font-weight: 700;
+    text-align: center;
+    position: relative;
+    padding: 46px 0 20px;
+    line-height: 1.5;
+    color: $color-primary;
+    
+   
+    &__text {
+        font-size: 2.8rem;
+        line-height: 1.1;
+        letter-spacing: 0.2em;
+        font-weight: 700;
+        font-family:$font-secondary;
+        
+        @include mq("tablet") {
+            font-size: 2rem;
+        }
+        @include mq("bootstrap-lg") {
+            font-size: 3.4rem;
+        }
+    }
+    & .-eng {
+        font-size: 18px;
+        line-height: 1.2;
+        letter-spacing: 0.1em;
+        margin-top: 9px;
+        font-family:$font-primary;
+        @include mq("tablet") {
+            font-size: 1.4rem;
+        }
+        @include mq("bootstrap-lg") {
+            font-size: 2rem;
+        }
+    }
+    &.--sub:after {
+        left: 50%;
+    }
+}
+.heading-secondary {
+    letter-spacing: 0.2em;
+    line-height: 1.4;
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    position: absolute;
+
+    & span:first-of-type {
+        font-family: $font-secondary;
+        font-size: 3.5rem;
+        letter-spacing: 0.2em;
+        display: block;
+
+        @include mq("phablet") {
+            font-size: 4.8rem;
+        }
+    }
+    & span:last-of-type {
+        font-size: 1.9rem;
+        display: block;
+        letter-spacing: 0.1em;
+        font-family: $font-primary;
+        text-transform: uppercase;
+        @include mq("phablet") {
+            font-size: 2.7rem;
+        }
+    }
+
+    @include mq("phablet") {
+    }
+}
+.heading-primary:after {
+    content: "";
+    position: absolute;
+    height: 3px;
+    background-color: #30708e;
+    bottom: 1px;
+    width: 40px;
+    transform: translateX(-50%);
+    left: 50%;
+    @include mq("tablet") {
+        width: 50px;
+        height: 4px;
+        // bottom: -10px;
+        // left: 28px;
+    }
+}

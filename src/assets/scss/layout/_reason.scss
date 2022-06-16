@@ -1,0 +1,90 @@
+//SECTION PROBLEM
+.reason {
+    &__row {
+
+        // margin: 0 -12px 0;
+        // justify-content: center;
+
+        // &>[class^="col"] {
+        //     padding: 0 12px;
+        // }
+        @include mq('tablet') {
+            margin: 0 -15px 0;
+
+            &>[class^="col"] {
+                padding: 0 15px;
+            }
+        }
+    }
+}
+
+// reason card
+.reason-card {
+    margin-bottom: 40px;
+
+    @include mq('bootstrap-lg') {
+        margin-bottom: 0;
+    }
+
+    &__header {
+        text-align: center;
+        position: relative;
+        font-size: 1.8rem;
+        margin: 0 auto;
+        max-width: 100px;
+
+        @include mq('tablet') {
+            max-width: 150px;
+        }
+    }
+
+
+    &__body {
+        padding: 0 10px;
+
+        @include mq('phablet') {
+            padding: 0;
+        }
+    }
+
+    &__title {
+        font-size: 1.6rem;
+        font-weight: 700;
+        line-height: 1.7;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        height: auto;
+        word-break: keep-all;
+        // margin: 15px 0;
+
+
+        @include mq('tablet') {
+            font-size: 1.6rem;
+            height: 60px;
+        }
+
+        @include mq('bootstrap-lg') {
+            font-size: 1.8rem;
+            height: 70px;
+        }
+
+    }
+
+    &__text {
+        font-size: 1.4rem;
+        text-align: justify;
+        font-weight: 500;
+        line-height: 1.8;
+        margin: 0;
+
+        @include mq('tablet') {
+            font-size: 1.4rem;
+        }
+
+        @include mq('bootstrap-lg') {
+            font-size: 1.6rem;
+        }
+    }
+}

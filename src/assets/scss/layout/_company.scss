@@ -1,0 +1,247 @@
+.company {
+    @include mq("tablet") {
+        margin: 27px 0 29px;
+    }
+    &-text {
+        @include mq(phablet) {
+            padding: 0 33px;
+        }
+    }
+    &-image {
+        margin-top: 45px;
+        img {
+            margin-bottom: 6px;
+            max-width: 173px;
+
+            @include mq("phablet") {
+                margin-left: -26px;
+            }
+            @include mq("tablet") {
+                margin-left: 0;
+            }
+        }
+        @include mq("tablet") {
+            margin-top: 0;
+        }
+
+        @include mq("bootstrap-lg") {
+            padding-left: 55px;
+        }
+    }
+    & .service-para {
+        margin-bottom: 0px;
+        // letter-spacing: 0.07em;
+        // font-weight: 700;
+        // font-size: 22px;
+        // text-align: center;
+
+        &-head {
+            margin-left: 0;
+            font-size: 22px;
+            left: 0.07em;
+            font-weight: 700;
+            line-height: 1.4;
+            text-align: center;
+            @include mq("phablet") {
+                text-align: left;
+            }
+            @include mq("tablet") {
+                margin-left: 40px;
+            }
+        }
+    }
+    & .service-heading__text {
+        margin-bottom: 18px;
+        @include mq("tablet") {
+            margin-bottom: 9px;
+        }
+        span {
+            font-size: 1.6rem;
+            font-weight: 700;
+            line-height: 1.75;
+        }
+    }
+    & .-width {
+        padding: 15px 0;
+        margin-bottom: 0px;
+        border-top: 1px dotted #b3b3b3;
+        @include mq("phablet") {
+            padding: 0;
+        }
+    }
+    & .outline-text {
+        font-size: 1.6rem;
+        line-height: 1.6;
+        letter-spacing: 0.05em;
+        // padding: 18px 0 18px;
+        @include mq("phablet") {
+            padding: 15px 0;
+        }
+    }
+    & .-lst {
+        padding-bottom: 13px;
+        @include mq("tablet") {
+            padding-bottom: 8px;
+        }
+    }
+    & .top {
+        display: flex;
+        justify-content: space-evenly;
+
+        @include mq("tablet") {
+            justify-content: center;
+        }
+        @include mq("phablet") {
+            margin-top: 50px;
+            align-items: center;
+        }
+        .company-text {
+            padding: 0 15px;
+            // padding-left: 33px;
+            // padding-right: 0;
+            @include mq("phablet") {
+                padding-left: 33px;
+                padding-right: 0;
+            }
+            @include mq("bootstrap-lg") {
+                padding-left: 15px;
+                padding-right: 44px;
+            }
+        }
+    }
+    & .heading-primary:after {
+        top: 100%;
+    }
+}
+
+.outline {
+    margin-top: 16px;
+    @include mq("tablet") {
+        margin-top: 7px;
+    }
+    &-wrapper {
+        padding: 0 15px;
+
+        max-width: 760px;
+        margin: 29px auto 5px;
+        @include mq("tablet") {
+            padding: 0;
+            margin: 50px auto 29px;
+        }
+        & .-width {
+            .col-sm-2 {
+                @include mq("tablet") {
+                    padding-left: 15px;
+                }
+                padding-left: 0;
+            }
+        }
+    }
+    & .company-image {
+        padding: 0;
+        @include mq("phablet") {
+            padding-left: 38px;
+        }
+    }
+    & .company-text {
+        padding: 0;
+        @include mq("phablet") {
+            padding-left: 33px;
+        }
+    }
+
+    & .-addres {
+        margin-top: 0px;
+    }
+    // Change it mintay
+    & .service-para {
+        letter-spacing: 0.05em;
+    }
+
+    & .margin-dedukt {
+        @include mq("tablet") {
+            max-width: 770px;
+            margin: auto 12px;
+            margin-right: -1px;
+        }
+        & .col-sm-2 {
+            @include mq("tablet") {
+                padding: 0;
+            }
+        }
+        & .col-sm-10 {
+            @include mq("tablet") {
+                padding-left: 23px;
+            }
+        }
+    }
+
+    & .border-btm {
+        border-bottom: 1px dotted #b3b3b3;
+    }
+    & .-location {
+        margin-bottom: 15px;
+        @include mq("tablet") {
+            margin-bottom: 0;
+        }
+    }
+    & .-business {
+        margin-top: 35px;
+        @include mq("tablet") {
+            margin-top: 0;
+        }
+    }
+}
+.access {
+    &-text {
+        margin-bottom: 20px;
+        text-align: center;
+        @include mq("tablet") {
+            margin-bottom: 14px;
+        }
+
+        &-top {
+            margin-bottom: 20px;
+        }
+    }
+
+    &-heading {
+        font-size: 1.6rem;
+        font-weight: 700;
+        line-height: 1.75;
+
+        &-lg {
+            font-size: 2rem;
+        }
+    }
+    &-para {
+        font-size: 1.6rem;
+        line-height: 1.6;
+        letter-spacing: 0.05em;
+        @include mq("phablet") {
+            font-size: 1.4rem;
+        }
+        @include mq("bootstrap-lg") {
+            font-size: 1.6rem;
+        }
+    }
+    & .container-wrapper {
+        max-width: 930px;
+        margin: 20px auto 42px;
+        @include mq("tablet") {
+            margin: 36px auto 37px;
+        }
+    }
+    &-img {
+        margin-bottom: 27px;
+        @include mq("tablet") {
+            margin-bottom: 0;
+        }
+    }
+    & .lastimg {
+        margin-bottom: 0;
+        @include mq("tablet") {
+            margin-left: 5px;
+        }
+    }
+}

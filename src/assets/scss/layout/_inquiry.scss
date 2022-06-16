@@ -1,0 +1,428 @@
+.inquiry {
+    // background-color: rgba($color-primary, 0.05);
+    padding-top: 12px;
+
+    @include mq("phablet") {
+        padding-top: 20px;
+    }
+    @include mq("bootstrap-lg") {
+        padding-top: 26px;
+    }
+}
+
+.inquiry-form {
+    padding: 0 0 65px 0;
+    font-weight: 700;
+
+    @include mq("tablet") {
+        padding: 0 0 90px 0;
+        width: 90%;
+        margin: 0 auto;
+    }
+
+    @include mq("bootstrap-lg") {
+        width: 80%;
+        padding: 0 0 95px 0;
+    }
+
+    @include mq("desktop") {
+        width: 64%;
+        margin: 0 auto;
+        padding: 0 0 86px 0;
+    }
+    &--confirmation {
+        .inquiry-form__label,
+        .inquiry-form__value {
+            color: $color-black !important;
+        }
+
+        padding-top: 70px;
+
+        @include mq("bootstrap-lg") {
+            width: 80%;
+        }
+    }
+
+    &__title {
+        font-size: 15px;
+        line-height: 1.6;
+        font-weight: 400;
+        text-align: center;
+        color: $color-black;
+        margin: 20px 0 38px 0;
+
+        @include mq("tablet") {
+            line-height: 1.8;
+            margin: 40px 0 38px 0;
+            font-size: 1.6rem;
+        }
+
+        & span {
+            font-size: 15px;
+            font-weight: 400;
+            line-height: 2.1;
+            @include mq("tablet") {
+                font-size: 16px;
+            }
+        }
+    }
+
+    .form-group {
+        // margin-bottom: 25px;
+        &.row {
+            margin: 0 0 25px 0;
+            > [class^="col-"] {
+                padding: 0 10px;
+            }
+
+            @include mq("tablet") {
+                margin: 0 -10px 40px -10px;
+            }
+        }
+
+        @include mq("tablet") {
+            margin-bottom: 40px;
+        }
+    }
+
+    &__label-wrapper {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 10px;
+
+        @include mq("tablet") {
+            // justify-content: flex-end;
+            margin-bottom: 15px;
+            height: 100%;
+            margin-bottom: 0;
+        }
+    }
+
+    &__label,
+    &__value {
+        font-size: 16px;
+        color: #333;
+        margin-bottom: 0;
+
+        @include mq("tablet") {
+            font-size: 16px;
+        }
+
+        // @include mq("bootstrap-lg") {
+        //     font-size: 18px;
+        // }
+    }
+
+    &__label {
+        padding-left: 0;
+
+        @include mq("bootstrap-lg") {
+            // padding-left: 23px;
+        }
+    }
+
+    &__value {
+        font-weight: 400;
+    }
+
+    .form-control {
+        height: 50px;
+        border-radius: 0;
+        border: solid 1px $color-gray-dark--2;
+        font-family: $font-primary;
+        font-size: 1.6rem;
+        font-weight: 400;
+        box-shadow: inset 0 1px #afafaf;
+
+        &:focus {
+            box-shadow: 0 0 0 1px rgba($color-black, 0.4);
+        }
+
+        &::placeholder {
+            color: $color-gray-dark--2;
+        }
+    }
+
+    &__radio-wrapper {
+        .custom-control {
+            padding-left: 44px;
+
+            @include mq("phablet") {
+                padding-left: 2.8rem;
+            }
+
+            @include mq("tablet") {
+                padding-left: 2.8rem;
+            }
+
+            &:first-child {
+                padding-left: 2.8rem;
+            }
+        }
+
+        .custom-control-label {
+            font-size: 18px;
+            color: $color-black;
+            display: block;
+            font-weight: 500;
+
+            &:before,
+            &:after {
+                left: -1.7rem;
+                top: 0.1rem;
+                width: 15px;
+                height: 15px;
+            }
+        }
+
+        .custom-control-label::before {
+            border: 2px solid $color-gray-dark--2;
+        }
+
+        .custom-control-input:focus:not(:checked)
+            ~ .custom-control-label::before {
+            border-color: $color-white;
+        }
+
+        .custom-control-input:focus ~ .custom-control-label::before {
+            box-shadow: 0 0 0 0.2rem rgba($color-primary, 0.3);
+        }
+
+        .custom-control-input:checked ~ .custom-control-label::before {
+            border-color: $color-white;
+            background-color: $color-primary;
+        }
+
+        //reveal if active
+        .reveal-if-active {
+            opacity: 0;
+            max-height: 0;
+            overflow: hidden;
+            transform: scale(0.8);
+            transition: 0.5s;
+        }
+
+        .custom-control-input#radio1:checked ~ .reveal-if-active {
+            opacity: 1;
+            max-height: 100px;
+            overflow: visible;
+            transform: scale(1);
+            margin-top: 10px;
+        }
+    }
+
+    .custom-select {
+        background: url("../img/arrow-down.svg") no-repeat right 0.75rem center;
+        background-size: 22px 22px;
+    }
+
+    textarea.form-control {
+        height: 250px;
+        resize: none;
+    }
+
+    &__btn-wrapper {
+        margin-top: 45px;
+        width: 100%;
+        display: flex;
+        justify-content: center;
+
+        @include mq("tablet") {
+            margin-top: 60px;
+        }
+
+        .btn__mail {
+            padding: 19px 130px;
+            background-color: #006699;
+            font-weight: 700;
+            letter-spacing: 0.05em;
+            cursor: pointer;
+
+            &:hover {
+                opacity: 0.9;
+            }
+        }
+    }
+
+    &__btn {
+        display: flex;
+        text-align: center;
+        font-size: 21px;
+        font-weight: 700;
+        align-items: center;
+        flex-direction: row;
+        justify-content: center;
+        background: #006699;
+        padding: 12px 15px;
+        border-radius: 100px;
+        border: 4px solid #006699;
+        text-align: center;
+        text-decoration: none;
+        width: 100%;
+        color: $color-white;
+        padding-left: 40px;
+        padding-right: 40px;
+
+        @include mq("phablet") {
+            font-size: 24px;
+            width: 370px;
+            margin: 0 auto;
+            // margin-left: 12px;
+        }
+
+        &:hover {
+            text-decoration: none;
+            color: $color-white;
+            @include mq("tablet") {
+                border: 4px solid #074767;
+                background: #074767;
+
+                opacity: 0.8;
+            }
+        }
+    }
+
+    .privacy-group {
+        max-width: 730px;
+        margin: 0 auto;
+    }
+
+    .inquiry-form__privacy {
+        font-weight: 500;
+        padding: 25px 20px;
+        max-height: 200px;
+        overflow-y: scroll;
+        border: 1px solid #ccc;
+        background-color: $color-white;
+
+        h3 {
+            font-size: 20px;
+            font-weight: 700;
+            padding-bottom: 30px;
+        }
+
+        p,
+        li,
+        h5 {
+            font-size: 14px;
+            line-height: 1.6;
+            font-weight: 500;
+        }
+
+        h4 {
+            font-size: 16px;
+            font-weight: 700;
+            line-height: 1.8;
+            margin: 25px 0 10px;
+        }
+
+        p,
+        li {
+            padding-left: 15px;
+        }
+    }
+
+    &__radio-wrapper {
+        display: flex;
+        flex-direction: row;
+    }
+}
+
+// send.php
+.form-sended {
+    &__wrapper {
+        min-height: 60vh;
+        text-align: center;
+        display: flex;
+        flex-wrap: wrap;
+        align-content: center;
+        justify-content: center;
+    }
+
+    &__text {
+        font-size: 16px;
+        line-height: 1.7;
+        @include mq("tablet") {
+            font-size: 20px;
+        }
+    }
+}
+
+.confirmation-page {
+    .inquiry-form {
+        @include mq("tablet") {
+            width: 85%;
+        }
+    }
+    // .heading-primary {
+    //     padding-top: 59px;
+    // }
+}
+
+.inquiry-form__btn--bg {
+    // background: linear-gradient(180deg, #00d200 40%, #007900 100%) !important;
+    // border: 4px solid #35b716;
+    // background: linear-gradient(180deg, #949191 40%, #bea6a6 100%) !important;
+    background-color: #949191;
+    border: none;
+
+    &:hover {
+        background-color: #838381;
+        border: none;
+        // background: linear-gradient(
+        //     180deg,
+        //     #00d200 40%,
+        //     #00d200 100%
+        // ) !important;
+        // border: 4px solid #35b716 !important;
+        // background: linear-gradient(
+        //     180deg,
+        //     #bea6a6 40%,
+        //     #949191 100%
+        // ) !important;
+        // border: 4px solid #949191;
+    }
+}
+
+.confirmation-page,
+.form-sended {
+    border-top: 2px solid #e27f63;
+}
+//radio-buttom
+.custom-radio .custom-control-label::before {
+    border-radius: 0;
+}
+
+.err {
+    color: $color-red;
+}
+
+.inquiry-form .form-control {
+    padding: 0.375rem 0.75rem 0.375rem 1.3rem;
+}
+
+.inquiry-form textarea.form-control {
+    padding: 1.1rem 0.75rem 0.375rem 1.3rem;
+}
+
+.txtarea .inquiry-form__label {
+    @include mq("tablet") {
+        padding-top: 16px;
+    }
+}
+.inquiry-form__btn--config {
+    background: #006699;
+    border: 4px solid #006699;
+
+    &:hover {
+        text-decoration: none;
+        color: $color-white;
+        border: 4px solid #006699;
+        background: #006699;
+        @include mq("tablet") {
+            border: 4px solid #006699;
+            background: #006699;
+        }
+    }
+}

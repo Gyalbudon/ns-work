@@ -1,0 +1,37 @@
+html {
+    font-size: 10px;
+}
+
+body {
+    font-family: $font-primary;
+    font-size: 1.6rem;
+    font-weight: 400;
+    color: $color-black;
+    line-height: 1.2;
+    background: $color-white;
+}
+
+.container {
+    display: block;
+    max-width: 100%;
+    overflow: hidden;
+
+    @include mq('phablet') {
+        padding: 0 15px;
+    }
+
+    @include mq('bootstrap-lg') {
+        max-width: 1024px;
+        padding: 0 15px;
+    }
+
+    @include mq('desktop') {
+        padding: 0;
+    }
+}
+
+%reset-ul {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+}

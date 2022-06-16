@@ -1,0 +1,16 @@
+.bottom-nav {
+    z-index: 100;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+    background: $color-white;
+    border-top: 1px solid $color-white;
+
+    @include mq('phablet') {
+        display: none !important;
+    }
+}

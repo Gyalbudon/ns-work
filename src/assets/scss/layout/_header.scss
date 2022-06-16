@@ -1,0 +1,222 @@
+.header {
+    position: absolute;
+    z-index: 1;
+    width: 100%;
+
+    &__logo-wrapper {
+        display: flex;
+        align-items: center;
+    }
+
+    &__logo {
+        width: 212px;
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+        &:hover{
+            opacity:0.8;
+        }
+        @include mq("tablet") {
+            width: 170px;
+        }
+        @include mq("bootstrap-lg") {
+            width: 200px;
+        }
+
+        @include mq("desktop") {
+            width: 283px;
+        }
+
+        & img {
+            width: 76px;
+
+            @include mq("tablet") {
+                width: 61px;
+            }
+            @include mq("bootstarp-lg") {
+                width: 90px;
+            }
+            @include mq("desktop") {
+                width: 102px;
+            }
+        }
+    }
+
+    &__flex-container {
+        display: flex;
+        justify-content: space-between;
+        padding: 11px 15px 10px 0px;
+        
+        width:100%;
+       
+
+        @include mq("tablet") {
+            padding: 17px 8px 20px 8px;
+            position:static;
+            background:none;
+        }
+        @include mq("desktop") {
+            padding: 17px 27px 24px 25px;
+        }
+    }
+
+    &__right {
+        display: none;
+
+        @include mq("tablet") {
+            display: flex;
+        }
+    }
+
+    &__nav {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        width: 275px;
+        margin-right: 64px;
+        position: relative;
+
+        @include mq("tablet") {
+            width: 190px;
+            margin-right: 26px;
+        }
+        @include mq("bootstrap-lg") {
+            width: 210px;
+            margin-right: 64px;
+        }
+
+        @include mq("desktop") {
+            width: 275px;
+           
+        }
+
+        &-list {
+            position: relative;
+        }
+
+        &-link {
+            font-size: 1.6rem;
+            font-weight: 700;
+            color: #fff;
+            text-decoration: none;
+
+            @include mq("tablet") {
+                font-size: 1.3rem;
+            }
+
+            @include mq("desktop") {
+                font-size: 1.6rem;
+            }
+
+            &::before {
+                position: absolute;
+                content: "";
+                display: block;
+                height: 2px;
+                background: #fdfdfd;
+                bottom: -7px;
+                width: 0;
+                transition: all 0.3s ease;
+            }
+
+            &:hover::before {
+                width: 100%;
+            }
+        }
+    }
+
+    &__text {
+        font-size: 1.5rem;
+        font-weight: 700;
+        line-height: 1.1;
+        text-decoration: none;
+        color: #000;
+        text-decoration: none;
+
+        @include mq("tablet") {
+            font-size: 1.3rem;
+        }
+
+        @include mq("desktop") {
+            font-size: 2rem;
+        }
+    }
+
+    &2 {
+        position: static;
+       
+        @include mq("tablet"){
+            margin-top:0;
+        }
+        .header__nav-link {
+            color: #000;
+            &::before {
+                background: #000;
+            }
+        }
+
+        .btn__phone-text {
+            color: #000;
+        }
+        .btn__mail {
+            background-color: #006699;
+            color: #fff;
+        }
+    }
+}
+
+.breadcrum {
+    background-color: #f2f2f2;
+
+    &__inner {
+        margin-left: 21px;
+        display: flex;
+        padding: 10px 0;
+
+        @include mq("bootstrap-lg") {
+            margin-left: 60px;
+        }
+    }
+    &__link {
+        color: #777;
+        font-size: 13px;
+        text-decoration: none;
+
+        &.active {
+            color: #0066ab;
+            margin-right: 20px;
+        }
+
+        
+    }
+
+    &__itm {
+        position: relative;
+
+        &::before {
+            content: "";
+            border: solid #777;
+            border-width: 0 1px 1px 0;
+            display: inline-block;
+            padding: 3px;
+            position: absolute;
+            left: -15px;
+            top: 8px;
+            transform: rotate(-45deg);
+        }
+    }
+}
+
+.header2 {
+    .nav-icon:before,
+    .nav-icon:after,
+    .nav-icon > span {
+        background-color: #0066AB;
+    }
+}
+
+.header2 {
+    nav.is-opened {
+        height: 450px;
+    }
+}

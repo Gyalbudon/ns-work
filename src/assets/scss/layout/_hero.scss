@@ -1,0 +1,83 @@
+.hero {
+    background: url(../img/hero-sp.jpg);
+    height: 500px;
+    max-height: 500px;
+    background-size: 100% 100%;
+    position: relative;
+
+    @include mq("tablet") {
+        background: url(../img/hero.jpg);
+        height: 700px;
+        max-height: 700px;
+        background-size: cover;
+        background-position: center;
+        background-color: #ccc;
+    }
+
+    &__box {
+        display: flex;
+    }
+
+    &__details {
+        display: block;
+
+        width: 100%;
+
+        @include mq("phablet") {
+            width: 100%;
+        }
+
+        @include mq("tablet") {
+            width: 55%;
+        }
+    }
+    &-vtxt {
+        position: absolute;
+        left: 31%;
+        top: 24%;
+        writing-mode: vertical-lr;
+
+        @include mq("phablet") {
+            left: 24%;
+        }
+
+        @include mq("tablet") {
+            left: 21%;
+            top: 25%;
+            transform: translate(-30%, -8%);
+        }
+        @include mq("bootstrap-lg") {
+            left: 18%;
+        }
+        & p {
+            font-family: $font-secondary;
+            font-size: 3.1rem;
+            font-weight: 700;
+            color: $color-white;
+            line-height: 1.6;
+            // letter-spacing: 0.2em;
+
+            @include mq("tablet") {
+                letter-spacing: 0.2em;
+            }
+            @include mq("bootstrap-lg") {
+                font-size: 4.7rem;
+            }
+        }
+        & span {
+            font-size: 2.1rem;
+            @include mq("bootstrap-lg") {
+                font-size: 3.2rem;
+                letter-spacing: 6px;
+            }
+        }
+    }
+}
+
+.hero-bg {
+    background-position: center;
+    background-size: cover;
+    height: 300px;
+    position: relative;
+    background-color: #ccc;
+}

@@ -1,0 +1,55 @@
+{
+    "name": "vm-boilerplate",
+    "version": "1.0.0",
+    "description": "Starter Template for Vantage Management Project.",
+    "main": "index.js",
+    "scripts": {
+        "start": "gulp watch",
+        "build": "gulp",
+        "purge": "gulp purge"
+    },
+    "repository": {
+        "type": "git"
+    },
+    "author": "WParijat",
+    "license": "ISC",
+    "devDependencies": {
+        "@babel/core": "^7.7.5",
+        "@babel/preset-env": "^7.7.6",
+        "babel-loader": "^8.0.6",
+        "browser-sync": "^2.26.7",
+        "del": "^4.1.1",
+        "gulp": "^4.0.2",
+        "gulp-autoprefixer": "^6.1.0",
+        "gulp-clean-css": "^4.2.0",
+        "gulp-eslint": "^5.0.0",
+        "gulp-file-include": "^2.1.1",
+        "gulp-group-css-media-queries": "^1.2.2",
+        "gulp-imagemin": "^5.0.3",
+        "gulp-newer": "^1.4.0",
+        "gulp-notify": "^3.2.0",
+        "gulp-plumber": "^1.2.1",
+        "gulp-postcss": "^8.0.0",
+        "gulp-purgecss": "^2.1.0",
+        "gulp-rename": "^1.4.0",
+        "gulp-sass": "^4.0.2",
+        "gulp-sourcemaps": "^2.6.5",
+        "gulp-uglify": "^3.0.2",
+        "webpack": "^4.41.2",
+        "webpack-stream": "^5.2.1"
+    },
+    "dependencies": {
+        "bootstrap": "^4.4.1",
+        "jquery": "^3.4.1",
+        "popper.js": "^1.16.0"
+    },
+    "browserslist": [
+        "last 2 versions",
+        "safari 5",
+        "ie 8",
+        "ie 9",
+        "opera 12.1",
+        "ios 6",
+        "android 4"
+    ]
+}

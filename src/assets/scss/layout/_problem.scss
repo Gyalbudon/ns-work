@@ -1,0 +1,108 @@
+.problem {
+    position: relative;
+
+    @include mq('tablet') {
+        background-image: url(../img/problem/problem-bg.png);
+        background-position: center right;
+        background-repeat: no-repeat;
+        background-size: contain;
+    }
+
+    @include mq('bootstrap-lg') {
+        background-size: contain;
+        background-position: center right;
+    }
+
+
+    &__row {
+        @include mq('tablet') {
+            padding-left: 45px;
+        }
+
+        @include mq('bootstrap-lg') {
+            padding-left: 90px;
+            padding-top: 15px;
+        }
+    }
+
+    &__list {
+        @extend %reset-ul;
+    }
+
+    &__item {
+        margin-bottom: 15px;
+        font-size: 1.5rem;
+        font-weight: 700;
+        text-shadow: white 1px 1px 2px, white -1px 1px 2px, white 1px -1px 2px, white -1px -1px 2px;
+        line-height: 1.8;
+        position: relative;
+        padding-left: 35px;
+
+        @include mq('tablet') {
+            font-size: 1.8rem;
+            padding-left: 45px;
+            margin-bottom: 20px;
+        }
+
+        @include mq('bootstrap-lg') {
+            font-size: 2.0rem;
+            margin-bottom: 40px;
+        }
+
+        // &:last-child {
+        //     margin-bottom: 0;
+        // }
+
+        img {
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            top: 3px;
+            left: 0;
+
+
+            @include mq('tablet') {
+                width: 25px;
+                height: 25px;
+                top: 5px;
+            }
+        }
+
+        span {
+            font-size: 2.0rem;
+            line-height: 1.5;
+            font-weight: 700;
+            border-bottom: 2px solid $color-accent;
+
+            @include mq('tablet') {
+                font-size: 2.2rem;
+                padding-bottom: 2px;
+
+            }
+
+            @include mq('bootstrap-lg') {
+                font-size: 2.7rem;
+            }
+        }
+
+    }
+
+    &__btm-desc {
+        font-size: 1.8rem;
+        font-family: 'Noto Sans JP',
+            sans-serif;
+        font-weight: 700;
+        text-shadow: white 1px 1px 2px, white -1px 1px 2px, white 1px -1px 2px, white -1px -1px 2px;
+        color: $color-accent;
+
+
+        @include mq('phablet') {
+            font-size: 3.0rem;
+        }
+
+        @include mq('tablet') {
+            font-size: 3.7rem;
+        }
+
+    }
+}
